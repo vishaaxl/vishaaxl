@@ -1,4 +1,4 @@
-# Invoice App
+# Vishal Shukla
 
 ![Design preview for the first version of my portfolio website](./public/images/pika-2022-07-06T11_30_07.644Z.png)
 

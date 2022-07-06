@@ -2,6 +2,8 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+
+// types for blog data
 import { API, BlogArticleType } from "interfaces";
 
 const articlesDirectory = join(process.cwd(), "articles");
@@ -16,6 +18,7 @@ function getAllSlugs(): Array<string> {
   return fs.readdirSync(articlesDirectory);
 }
 
+//functions which returns the list of all slugs for static paths
 function getSlugs(): Array<string> {
   return getAllSlugs().map((slug) => slug.replace(/\.mdx$/, ""));
 }
@@ -52,6 +55,7 @@ function getAllArticles(fields: string[] = []): Array<BlogArticleType> {
     .sort((article1, article2) => (article1.date > article2.date ? -1 : 1));
 }
 
+//filter posts by tags
 function getArticlesByTag(
   tag: string,
   fields: string[] = []

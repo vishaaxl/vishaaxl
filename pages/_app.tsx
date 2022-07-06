@@ -5,8 +5,8 @@ import type { AppProps } from "next/app";
 import Router from "next/router";
 import { useEffect, useState } from "react";
 
-import Layout from "components/Layout";
-import Loader from "components/Loader";
+import Layout from "components/global/Layout";
+import Loader from "components/global/Loader";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [preLoader, setPreLoader] = useState<boolean>(true);

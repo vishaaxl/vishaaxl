@@ -3,7 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const ProjectCard: React.FC = () => {
+interface Props {
+  data: {
+    name: string;
+    description: string;
+    projectLink: string;
+  };
+}
+
+const ProjectCard: React.FC<Props> = ({ data }) => {
   return (
     <motion.div
       whileHover={{
@@ -19,23 +27,22 @@ const ProjectCard: React.FC = () => {
           width="40"
         />
       </div>
-      <h3 className="h1 font-bold mb-4 text-lightSlate">1. Flappy bird</h3>
+      <h3 className="h1 font-bold mb-4 text-lightSlate">{data.name}</h3>
 
       <p className="para child:pr-5">
-        Clone of the original Flappy bird game implemented using react-native,
-        matter-js and react-native-game-engine.
+        {data.description}
         <br />
         <br />
-        <Link href="#">
+        {/* <Link href={data.projectLink}>
           <span className="text-green cursor-pointer font-semibold">
             Casestudy
           </span>
-        </Link>
-        <Link href="#">
+        </Link> */}
+        <a href={data.projectLink} target="_blank" rel="noreferrer">
           <span className="text-green cursor-pointer font-semibold">
-            Open link
+            View Project
           </span>
-        </Link>
+        </a>
       </p>
     </motion.div>
   );

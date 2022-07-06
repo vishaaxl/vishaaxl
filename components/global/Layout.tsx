@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
-import Navigation from "components/Navigation";
-import { LoadingProgress } from "components/Loader";
+import Navigation from "components/global/Navigation";
+import { LoadingProgress } from "components/global/Loader";
 
 interface Props {
   children: ReactNode;

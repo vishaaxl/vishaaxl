@@ -14,7 +14,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply select-none bg-navy text-white font-custom no-scrollbar;
+    @apply bg-navy text-white font-custom no-scrollbar;
   }
 }
 

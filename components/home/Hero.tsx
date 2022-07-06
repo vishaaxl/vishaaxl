@@ -15,11 +15,8 @@ const Hero: React.FC = () => {
         </p>
         <div className="text-slate pl-10 md:pl-12 font-thin text-xl sm:text-3xl sm:mt-2 md:w-[90%] lg:w-[80%] text-justify lg:text-start">
           &quot;Hi! my name is{" "}
-          <span className="text-green font-bold cursor-pointer text-[1.8rem] sm:text-[2.5rem]">
-            {" "}
-            Vishal Shukla
-          </span>
-          . I&apos;m a self taught full-stack web developer specializing in
+          <span className="text-green cursor-pointer"> Vishal Shukla.</span>{" "}
+          I&apos;m a self taught full-stack web developer specializing in
           building (and occasionally designing) awesome web-apps and native
           mobile applications.
           <Link href="#about">

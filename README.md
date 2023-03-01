@@ -8,6 +8,6 @@
 
 My name is Vishal Shukla. I'm a self taught full-stack web developer specializing in building (and occasionally designing) awesome web-apps and native mobile applications.
 
-#### To know more about visit my personal website <a href="http://example.com/" target="_blank">vishaaxl.vercel.app</a>
+#### To know more about visit my personal website <a href="http://vishaaxl.in/" target="_blank">vishaaxl.in</a>
 
-#### To read my blogs and learn together visit <a href="http://example.com/" target="_blank">vishaaxl.vercel.app/blog</a>
+#### To read my posts and learn together follow  me on twitter<a href="https://twitter.com/vishaaxl/" target="_blank">twitter</a>

@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm currently working on a flutter app with minimal workout plans.<br>Currently learning Flutter and Svelte.<br>I like playing volleyball when I'm not coding.
+If I had a dollar everytime I wrote a bug, I'd still be broke.🗿
 
 
 ## 🌐 Socials:

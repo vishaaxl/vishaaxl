@@ -1,101 +1,161 @@
+"use client";
+
+import RetroText from "@/components/RetroText";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container">
+      {/* short intro */}
+      <div id="section-1" className="section h-[100vh] flex items-center">
+        <div className="relative bg-brightYellow border-2 border-black w-full h-[95%] lg:h-[80%] rounded-md flex flex-col items-center justify-center gap-4">
+          <RetroText text="Making cool sh#t happen since 2019"></RetroText>
+          <div className="flex flex-col items-center lg:flex-row justify-between">
+            <p className="max-w-4xl text-left text-sm lg:text-xl font-semibold px-4">
+              From the shadows, a self-taught full-stack web developer emerges
+              with a flair for building and occasionally designing impressive
+              web apps. I seamlessly blend backend prowess with frontend
+              creativity to craft powerful, dynamic digital experiences.
+            </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <motion.div
+              // animate={{ y: [0, -5, 0] }} // Float up and down
+              // transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
+              className="relative top-10 cursor-pointer opacity-80 max-w-fit"
+            >
+              <Image
+                src="/images/sayhi.png"
+                className=""
+                alt="link-to-email"
+                width={200}
+                height={200}
+              />
+              <span className="absolute text-xl font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+                Say hiiii
+              </span>
+            </motion.div>
+          </div>
+
+          <motion.div
+            animate={{ y: [0, -10, 0] }} // Float up and down
+            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
+            className="absolute bottom-10"
           >
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/scroll-down.png"
+              className="rotate-90"
+              alt="scroll-down-icon"
+              width={125}
+              height={125}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Experience and about */}
+      <div
+        id="section-2"
+        className="section h-[100vh] flex flex-col items-start justify-around"
+      >
+        {/* <div className="pb-4 lg:pb-0">
+          <RetroText text="Experience"></RetroText>
+        </div> */}
+
+        <div className="grid grid-cols-12 h-[95%] lg:h-[80%] gap-4 w-full">
+          <div className="border-2 border-black rounded-sm col-span-12 lg:col-span-9 p-4 flex flex-col justify-around">
+            <div className="flex flex-col lg:flex-row items-center justify-between">
+              <div className="flex flex-col lg:flex-row gap-4 items-end">
+                <div className="relative">
+                  <h2 className="retro text-5xl text-white whitespace-nowrap">
+                    Full Stack Developer
+                  </h2>
+                  <h2 className="absolute left-[2px] top-0 retro text-5xl whitespace-nowrap">
+                    Full Stack Developer
+                  </h2>
+                  <Image
+                    src="/images/doodle.png"
+                    className="absolute"
+                    alt="scroll-down-icon"
+                    width={125}
+                    height={125}
+                  />
+                </div>
+                <h4 className="font-medium relative bottom-2">
+                  @virtue analytics
+                </h4>
+              </div>
+              <span className="text-sm font-semibold">May 2023 - Current</span>
+            </div>
+            <ul className="font-medium text-base grid gap-4">
+              <li>
+                - Successfully managed a HIPAA-compliant healthcare application
+                for a US-based client, ensuring full compliance with data
+                security and privacy regulations.
+              </li>
+              <li>
+                - Successfully managed a HIPAA-compliant healthcare application
+                for a US-based client, ensuring full compliance with data
+                security and privacy regulations.
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-3 bg-brightYellow rounded-sm hidden lg:block"></div>
+          <div className="col-span-3 bg-fadedRed rounded-sm hidden lg:block"></div>
+          <div className="rounded-sm border-2 border-black col-span-12 lg:col-span-9 p-4 flex flex-col justify-around">
+            <div className="flex flex-col lg:flex-row items-center justify-between">
+              <div className="flex flex-col lg:flex-row gap-4 items-end">
+                <div className="relative">
+                  <h2 className="retro text-5xl text-white whitespace-nowrap">
+                    Full Stack Developer
+                  </h2>
+                  <h2 className="absolute left-[2px] top-0 retro text-5xl whitespace-nowrap">
+                    Full Stack Developer
+                  </h2>
+                  <Image
+                    src="/images/doodle.png"
+                    className="absolute rotate-180 lg:left-10"
+                    alt="scroll-down-icon"
+                    width={125}
+                    height={125}
+                  />
+                </div>
+                <h4 className="font-medium relative bottom-2">@ample media</h4>
+              </div>
+              <span className="text-sm font-semibold">
+                June 2020 - April 2023
+              </span>
+            </div>
+            <ul className="font-medium text-base grid gap-4">
+              <li>
+                - Successfully managed a HIPAA-compliant healthcare application
+                for a US-based client, ensuring full compliance with data
+                security and privacy regulations.
+              </li>
+              <li>
+                - Successfully managed a HIPAA-compliant healthcare application
+                for a US-based client, ensuring full compliance with data
+                security and privacy regulations.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Projects */}
+      <div id="section-3" className="section h-[100vh] flex items-center">
+        <div className="grid lg:grid-cols-12 h-[95%] lg:h-[80%] gap-4 w-full">
+          <div className="bg-brightNeonGreen lg:col-span-7 rounded-sm"></div>
+          <div className="bg-fadedBlack rounded-sm lg:col-span-5"></div>
+          <div className="bg-brightYellow w-full rounded-sm lg:col-span-5"></div>
+          <div className="bg-fadedBlue w-full rounded-sm lg:col-span-7"></div>
+        </div>
+      </div>
+
+      {/* Contact me */}
+      <div id="section-4" className="section h-[100vh] flex items-center">
+        <div className="bg-fadedRed w-full h-[95%] lg:h-[80%] rounded-md p-8 flex items-center"></div>
+      </div>
     </div>
   );
 }

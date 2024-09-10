@@ -1,27 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "RetroCool";
+  src: url("/fonts/retro/RetroCool-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* height: 100vh; */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+body:after {
+  /* content is required when using :after */
+  content: "";
+  /* The animation */
+  animation: grain 8s steps(10) infinite;
+  background-image: url("/images/noise.webp");
+  height: 300%;
+  min-width: 300%;
+  left: -50%;
+  top: -100%;
+  /* We're using opacity in place of a transparent image */
+  opacity: 0.2;
+  position: fixed;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 80rem;
+  width: 95%; /* Remove the quotes */
+  margin: 0 auto;
+}
+
+.retro {
+  font-family: "RetroCool", sans-serif;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }

@@ -9,8 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brightYellow: "#fce849",
+        fadedBlack: "#1f1f1f",
+        brightNeonGreen: "#9aef5e",
+        fadedRed: "#d74337",
+        fadedBlue: "#b6cff8",
+        brightOrange: "#d9744c",
+      },
+      borderRadius: {
+        md: "80px",
+        sm: "20px",
       },
     },
   },

@@ -46,6 +46,15 @@ body:after {
   font-family: "RetroCool", sans-serif;
 }
 
+.pages {
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+
+  display: inline-block;
+}
+
 @keyframes grain {
   0%,
   100% {

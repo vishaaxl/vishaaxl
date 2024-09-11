@@ -93,11 +93,12 @@ export default function Home() {
         {" "}
         <div
           id="section-skills"
-          className="container h-[100vh] flex flex-col items-start justify-around"
+          className="container h-[100vh] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-6"
         >
+          <div className="border-2 border-black bg-brightNeonGreen h-[95%] lg:h-[80%] rounded-md"></div>
           <div
             ref={containerRef}
-            className="overflow-hidden w-full border-t-2 border-b-2 bg-white border-black h-[95%] lg:h-[80%] flex items-center"
+            className="overflow-hidden bg-fadedBlue w-full border-2 rounded-md border-black h-[95%] lg:h-[80%] flex items-center"
           >
             <OppositeScroll
               width={dimensions.width}
@@ -141,8 +142,8 @@ export default function Home() {
 
       {/* Contact me */}
       <section className="pages">
-        <div id="section-4" className="container h-[100vh] flex items-center">
-          <div className="bg-fadedRed bg-white w-full border-2 border-black h-[95%] lg:h-[80%] rounded-md p-8 flex items-center"></div>
+        <div id="section-4" className="container  h-[100vh] flex items-center">
+          <div className="bg-white  w-full border-2 border-black h-[95%] lg:h-[80%] rounded-md p-8 flex items-center"></div>
         </div>
       </section>
     </>

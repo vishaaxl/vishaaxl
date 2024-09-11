@@ -93,7 +93,7 @@ export default function Home() {
         {" "}
         <div
           id="section-skills"
-          className="container h-[100vh] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-6"
+          className="container h-[200vh] lg:h-[100vh] grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-6"
         >
           <div className="border-2 border-black bg-brightNeonGreen h-[95%] lg:h-[80%] rounded-md"></div>
           <div

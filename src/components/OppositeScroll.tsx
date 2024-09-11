@@ -120,7 +120,7 @@ const MatterComponent: React.FC<MatterComponentProps> = ({ width, height }) => {
       });
     });
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 50; i++) {
       let radius = 2 + Math.random() * 20;
       if (width < 400) continue;
       World.add(
@@ -162,17 +162,17 @@ const MatterComponent: React.FC<MatterComponentProps> = ({ width, height }) => {
       }), // Left
     ]);
 
-    // Create a Mouse object and bind it to the render
-    const mouse = Mouse.create(render.canvas);
-    const mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.8,
-        render: {
-          visible: false,
-        },
-      },
-    });
+    // // Create a Mouse object and bind it to the render
+    // const mouse = Mouse.create(render.canvas);
+    // const mouseConstraint = MouseConstraint.create(engine, {
+    //   mouse: mouse,
+    //   constraint: {
+    //     stiffness: 0.1,
+    //     render: {
+    //       visible: false,
+    //     },
+    //   },
+    // });
 
     let inc = 0;
 
@@ -186,12 +186,7 @@ const MatterComponent: React.FC<MatterComponentProps> = ({ width, height }) => {
       idRAF = requestAnimationFrame(update);
     }
 
-    // update();
-
-    World.add(world, mouseConstraint);
-
-    // Keep the mouse in sync with rendering
-    render.mouse = mouse;
+    update();
 
     return () => {
       Matter.Render.stop(render);

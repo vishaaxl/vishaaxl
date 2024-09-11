@@ -121,8 +121,8 @@ const MatterComponent: React.FC<MatterComponentProps> = ({ width, height }) => {
     });
 
     for (let i = 0; i < 50; i++) {
-      let radius = 2 + Math.random() * 20;
-      if (width < 400) continue;
+      let radius = 2 + Math.random() * (width > 400 ? 20 : 10);
+      //   if (width < 400) continue;
       World.add(
         engine.world,
         Bodies.circle(

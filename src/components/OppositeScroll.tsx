@@ -218,8 +218,8 @@ const MatterComponent: React.FC<MatterComponentProps> = ({ width, height }) => {
             className="relative flex items-center justify-center"
             onClick={() => setWarningTouched(true)}
           >
-            <span className="absolute bg-white px-2 whitespace-nowrap text-xl font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-              {warningTouched ? "Told you not to touch" : "Don't touch"}
+            <span className="absolute whitespace-nowrap text-xl font-semibold uppercase left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              {warningTouched ? "HeHe" : "Don't touch"}
             </span>
             {!warningTouched && (
               <NextImage

@@ -71,16 +71,19 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="hero-text w-full font-bold text-[165px] flex justify-between items-center min-h-[40vh] mt-10">
-        {config.heroText}
+      <div className="hero-text w-full font-bold text-8xl flex flex-col  justify-center min-h-[70vh] lg:min-h-[40vh] lg:flex-row lg:items-center lg:text-[112px] lg:whitespace-nowrap mt-10">
+        <span>Making</span>
+        <span>Cool</span>
+        <span>Sh#t</span>
+        <span>Happen</span>
       </div>
 
       <div className="grid gap-4">
-        <div className="rounded-[50px] px-10 flex flex-col justify-center gap-5 overflow-hidden w-full bg-accent-beige min-h-[50vh] relative">
-          <h2 className="feature-title text-6xl font-semibold leading-tight">
+        <div className="rounded-[50px] p-8 lg:p-10 flex flex-col justify-start lg:justify-center gap-5 overflow-hidden w-full bg-accent-beige min-h-[100vh] lg:min-h-[50vh] relative">
+          <h2 className="feature-title text-5xl lg:text-6xl font-semibold leading-tight">
             {config.featureSection.title}
           </h2>
-          <p className="feature-description text-2xl max-w-[600px]">
+          <p className="feature-description text-right lg:text-left text-2xl max-w-[600px]">
             {config.featureSection.description}
           </p>
           <a
@@ -93,13 +96,15 @@ export default function Home() {
         </div>
 
         {/* Additional Sections */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4">
           <div className="py-16 min-h-[40vh] flex px-6 flex-col gap-14 justify-center relative">
             <div className="">
-              <h2 className="feature-title text-6xl font-semibold leading-tight">
+              <h2 className="text-center lg:text-left text-5xl font-semibold leading-tight">
                 Hi, Nice to meet you
               </h2>
-              <span className="text-4xl">I am Vishal aka the guy</span>
+              <span className="text-2xl block text-center lg:text-left">
+                I am Vishal aka the guy
+              </span>
               <p className="text-lg text-justify max-w-[800px] mt-14">
                 The technical jargon and me convincing you can wait—let’s get
                 your project off the ground and into the world. Let’s keep it
@@ -107,7 +112,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="bg-accent-beige min-h-[80vh] rounded-l-[50px] flex items-center justify-center">
+          <div className="bg-accent-beige min-h-[50vh] lg:min-h-[80vh] rounded-l-[50px] flex items-center justify-center">
             <div className="grid grid-cols-3 gap-6">
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
                 <SiNextdotjs className="text-6xl" />
@@ -140,7 +145,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-l-[50px] bg-accent-beige min-h-[40vh] flex px-14 flex-col gap-14 justify-center">
+          <div className="rounded-l-[50px] bg-accent-beige min-h-[80vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
             <h2 className="feature-title max-w-[90%] text-4xl font-semibold leading-tight">
               {config.designSection.leftTitle}
             </h2>
@@ -148,7 +153,7 @@ export default function Home() {
               {config.designSection.leftDescription}
             </p>
           </div>
-          <div className="rounded-r-[50px] bg-foreground text-background min-h-[40vh] flex px-14 flex-col gap-14 justify-center">
+          <div className="rounded-r-[50px] bg-foreground text-background min-h-[80vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
             <h2 className="feature-title max-w-[90%] ml-auto text-4xl leading-tight text-right">
               {config.designSection.rightTitle}
             </h2>
@@ -158,7 +163,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="py-10 flex px-6 flex-col gap-2 justify-center">
+        <div className="py-10 flex px-6 flex-col gap-2 justify-center pb-24">
           <h2 className="feature-title text-6xl font-semibold leading-tight">
             {config.finalSection.title}
           </h2>

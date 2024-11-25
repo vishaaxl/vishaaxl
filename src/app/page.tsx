@@ -1,15 +1,6 @@
-import { FaArrowRight, FaPython } from "react-icons/fa";
-import { FaDocker } from "react-icons/fa";
-import {
-  SiMongodb,
-  SiTypescript,
-  SiNextdotjs,
-  SiKubernetes,
-  SiNodedotjs,
-} from "react-icons/si";
+import { FaArrowRight } from "react-icons/fa";
+
 import { PiFlowerFill } from "react-icons/pi";
-import { FaGolang } from "react-icons/fa6";
-import { BiLogoPostgresql } from "react-icons/bi";
 
 const config = {
   headerLinks: [
@@ -108,42 +99,16 @@ export default function Home() {
               <p className="text-lg text-justify max-w-[800px] mt-8">
                 The technical jargon and me convincing you can wait—let’s get
                 your project off the ground and into the world. Let’s keep it
-                simple: I build cool stuff that works.
+                simple:{" "}
+                <span className="underline">
+                  {" "}
+                  I build cool stuff that works
+                </span>
+                .
               </p>
             </div>
           </div>
-          <div className="min-h-[50vh] lg:min-h-[60vh] rounded-l-[50px] flex items-center justify-center">
-            <div className="grid grid-cols-3 gap-6">
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiNextdotjs className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <FaGolang className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiMongodb className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <BiLogoPostgresql className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiNodedotjs className="text-4xl" />
-              </div>
-
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiTypescript className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <FaDocker className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiKubernetes className="text-4xl" />
-              </div>
-              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <FaPython className="text-4xl" />
-              </div>
-            </div>
-          </div>
+          <div className=""></div>
 
           <div className="rounded-l-[50px] bg-accent-beige min-h-[80vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
             <h2 className="feature-title max-w-[90%] text-4xl font-semibold leading-tight">

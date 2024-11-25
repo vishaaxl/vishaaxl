@@ -1,6 +1,15 @@
-import { FaArrowRight } from "react-icons/fa";
-import { IoCodeSlash } from "react-icons/io5";
+import { FaArrowRight, FaPython } from "react-icons/fa";
+import { FaDocker } from "react-icons/fa";
+import {
+  SiMongodb,
+  SiTypescript,
+  SiNextdotjs,
+  SiKubernetes,
+  SiNodedotjs,
+} from "react-icons/si";
 import { PiFlowerFill } from "react-icons/pi";
+import { FaGolang } from "react-icons/fa6";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const config = {
   headerLinks: [
@@ -48,7 +57,7 @@ const config = {
 export default function Home() {
   return (
     <main className="container">
-      <div className="fixed left-[50%] translate-x-[-50%] top-0 z-10 bg-foreground text-background rounded-b-[20px] py-3 hover:py-[14px] transition-all">
+      <div className="fixed left-[50%] translate-x-[-50%] top-0 z-10 bg-foreground text-background rounded-b-[20px] py-3 hover:text-accent-beige transition-all">
         {config.headerLinks.map((link, index) => (
           <a
             key={index}
@@ -91,28 +100,48 @@ export default function Home() {
                 Hi, Nice to meet you
               </h2>
               <span className="text-4xl">I am Vishal aka the guy</span>
+              <p className="text-lg text-justify max-w-[800px] mt-14">
+                The technical jargon and me convincing you can wait—let’s get
+                your project off the ground and into the world. Let’s keep it
+                simple: I build cool stuff that works.
+              </p>
             </div>
+          </div>
+          <div className="bg-accent-beige min-h-[80vh] rounded-l-[50px] flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-6">
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <SiNextdotjs className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <FaGolang className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <SiMongodb className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <BiLogoPostgresql className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <SiNodedotjs className="text-6xl" />
+              </div>
 
-            <ul className="flex flex-col gap-10">
-              {config.experience.map((job, index) => (
-                <li key={index} className="flex flex-col gap-1">
-                  <span className="flex items-center gap-2 text-2xl font-semibold">
-                    <PiFlowerFill />
-                    {job.company}
-                  </span>
-                  <span className="text-sm">{job.date}</span>
-                  <p className="text-lg text-justify max-w-[800px] my-4">
-                    {job.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <SiTypescript className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <FaDocker className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <SiKubernetes className="text-6xl" />
+              </div>
+              <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
+                <FaPython className="text-6xl" />
+              </div>
+            </div>
           </div>
 
-          <div className=""></div>
-
           <div className="rounded-l-[50px] bg-accent-beige min-h-[40vh] flex px-14 flex-col gap-14 justify-center">
-            <h2 className="feature-title text-4xl font-semibold leading-tight">
+            <h2 className="feature-title max-w-[90%] text-4xl font-semibold leading-tight">
               {config.designSection.leftTitle}
             </h2>
             <p className="text-lg text-justify">
@@ -120,7 +149,7 @@ export default function Home() {
             </p>
           </div>
           <div className="rounded-r-[50px] bg-foreground text-background min-h-[40vh] flex px-14 flex-col gap-14 justify-center">
-            <h2 className="feature-title text-4xl leading-tight text-right">
+            <h2 className="feature-title max-w-[90%] ml-auto text-4xl leading-tight text-right">
               {config.designSection.rightTitle}
             </h2>
             <p className="text-lg text-justify">

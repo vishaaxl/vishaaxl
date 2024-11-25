@@ -97,50 +97,50 @@ export default function Home() {
 
         {/* Additional Sections */}
         <div className="grid lg:grid-cols-2 gap-4">
-          <div className="py-16 min-h-[40vh] flex px-6 flex-col gap-14 justify-center relative">
+          <div className="py-16 min-h-[40vh] flex lg:px-6 flex-col gap-14 justify-center relative">
             <div className="">
-              <h2 className="text-center lg:text-left text-5xl font-semibold leading-tight">
+              <h2 className="text-5xl font-semibold leading-tight">
                 Hi, Nice to meet you
               </h2>
-              <span className="text-2xl block text-center lg:text-left">
+              <span className="text-2xl block mt-2">
                 I am Vishal aka the guy
               </span>
-              <p className="text-lg text-justify max-w-[800px] mt-14">
+              <p className="text-lg text-justify max-w-[800px] mt-8">
                 The technical jargon and me convincing you can wait—let’s get
                 your project off the ground and into the world. Let’s keep it
                 simple: I build cool stuff that works.
               </p>
             </div>
           </div>
-          <div className="bg-accent-beige min-h-[50vh] lg:min-h-[80vh] rounded-l-[50px] flex items-center justify-center">
+          <div className="min-h-[50vh] lg:min-h-[60vh] rounded-l-[50px] flex items-center justify-center">
             <div className="grid grid-cols-3 gap-6">
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiNextdotjs className="text-6xl" />
+                <SiNextdotjs className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <FaGolang className="text-6xl" />
+                <FaGolang className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiMongodb className="text-6xl" />
+                <SiMongodb className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <BiLogoPostgresql className="text-6xl" />
+                <BiLogoPostgresql className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiNodedotjs className="text-6xl" />
+                <SiNodedotjs className="text-4xl" />
               </div>
 
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiTypescript className="text-6xl" />
+                <SiTypescript className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <FaDocker className="text-6xl" />
+                <FaDocker className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <SiKubernetes className="text-6xl" />
+                <SiKubernetes className="text-4xl" />
               </div>
               <div className="flex justify-center items-center bg-foreground text-background w-[100px] h-[100px] rounded-[20px]">
-                <FaPython className="text-6xl" />
+                <FaPython className="text-4xl" />
               </div>
             </div>
           </div>

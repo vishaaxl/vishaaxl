@@ -1,113 +1,151 @@
-import Image from 'next/image'
+import { FaArrowRight } from "react-icons/fa";
+import { IoCodeSlash } from "react-icons/io5";
+import { PiFlowerFill } from "react-icons/pi";
+
+const config = {
+  headerLinks: [
+    { text: "Github", href: "https://github.com/vishaaxl" },
+    { text: "Resume", href: "https://flowcv.com/resume/g86v5tef43" },
+    { text: "Email", href: "mailto:vishaaxl@gmail.com" },
+  ],
+  heroText: "MakingCoolSh#t",
+  featureSection: {
+    title: "Here to make you look\ngood and win business.",
+    description:
+      "Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed.",
+    ctaText: "Get in Touch",
+    ctaLink: "mailto:vishaaxl@gmail.com",
+  },
+  experience: [
+    {
+      company: "Virtue Analytics",
+      date: "May 2023 - present",
+      description:
+        "Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed. Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed.",
+    },
+    {
+      company: "Ample Media Agency",
+      date: "January 2020 - February 2023",
+      description:
+        "Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed. Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed.",
+    },
+  ],
+  finalSection: {
+    title: "Wanna Connect ?",
+    ctaText: "Drop an email",
+    ctaLink: "mailto:vishaaxl@gmail.com",
+  },
+  designSection: {
+    leftTitle: "From design to development\n to deployment.",
+    leftDescription:
+      "Every project kicks off with an idea and wraps up with something awesome. I'll make sure everything runs smoothly, from the first brainstorm to the final launch.",
+    rightTitle: "Can't think of another\n catchy line.",
+    rightDescription:
+      "The technical jargon and me convincing you can wait—let’s get your project off the ground and into the world. Let’s keep it simple: I build cool stuff that works.",
+  },
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+    <main className="container">
+      <div className="fixed left-[50%] translate-x-[-50%] top-0 z-10 bg-foreground text-background rounded-b-[20px] py-3 hover:py-[14px] transition-all">
+        {config.headerLinks.map((link, index) => (
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            key={index}
+            href={link.href}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            className="px-6 border-r-2 last:border-0 border-accent-beige cursor-pointer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            {link.text}
+          </a>
+        ))}
+      </div>
+
+      <div className="hero-text w-full font-bold text-[165px] flex justify-between items-center min-h-[40vh] mt-10">
+        {config.heroText}
+      </div>
+
+      <div className="grid gap-4">
+        <div className="rounded-[50px] px-10 flex flex-col justify-center gap-5 overflow-hidden w-full bg-accent-beige min-h-[50vh] relative">
+          <h2 className="feature-title text-6xl font-semibold leading-tight">
+            {config.featureSection.title}
+          </h2>
+          <p className="feature-description text-2xl max-w-[600px]">
+            {config.featureSection.description}
+          </p>
+          <a
+            href={config.featureSection.ctaLink}
+            className="cta-button max-w-fit mt-4 font-medium py-4 px-8 rounded-full bg-foreground text-background flex items-center gap-4"
+          >
+            {config.featureSection.ctaText} <FaArrowRight className="float" />
+          </a>
+          <PiFlowerFill className="flower-icon text-accent-red absolute bottom-[-145px] right-[-100px] text-[500px] rotate" />
+        </div>
+
+        {/* Additional Sections */}
+        <div className="grid grid-cols-2 gap-4">
+          <div className="py-16 min-h-[40vh] flex px-6 flex-col gap-14 justify-center relative">
+            <div className="">
+              <h2 className="feature-title text-6xl font-semibold leading-tight">
+                Hi, Nice to meet you
+              </h2>
+              <span className="text-4xl">I am Vishal aka the guy</span>
+            </div>
+
+            <ul className="flex flex-col gap-10">
+              {config.experience.map((job, index) => (
+                <li key={index} className="flex flex-col gap-1">
+                  <span className="flex items-center gap-2 text-2xl font-semibold">
+                    <PiFlowerFill />
+                    {job.company}
+                  </span>
+                  <span className="text-sm">{job.date}</span>
+                  <p className="text-lg text-justify max-w-[800px] my-4">
+                    {job.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className=""></div>
+
+          <div className="rounded-l-[50px] bg-accent-beige min-h-[40vh] flex px-14 flex-col gap-14 justify-center">
+            <h2 className="feature-title text-4xl font-semibold leading-tight">
+              {config.designSection.leftTitle}
+            </h2>
+            <p className="text-lg text-justify">
+              {config.designSection.leftDescription}
+            </p>
+          </div>
+          <div className="rounded-r-[50px] bg-foreground text-background min-h-[40vh] flex px-14 flex-col gap-14 justify-center">
+            <h2 className="feature-title text-4xl leading-tight text-right">
+              {config.designSection.rightTitle}
+            </h2>
+            <p className="text-lg text-justify">
+              {config.designSection.rightDescription}
+            </p>
+          </div>
+        </div>
+
+        <div className="py-10 flex px-6 flex-col gap-2 justify-center">
+          <h2 className="feature-title text-6xl font-semibold leading-tight">
+            {config.finalSection.title}
+          </h2>
+          <a
+            href={config.finalSection.ctaLink}
+            className="cta-button max-w-fit mt-4 font-medium py-4 px-8 rounded-full bg-foreground text-background flex items-center gap-4"
+          >
+            {config.finalSection.ctaText} <FaArrowRight className="float" />
           </a>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <footer className="text-center pb-2 text-sm">
+          Crafted with ❤️ by Vishal, © {new Date().getFullYear()}. All rights
+          reserved.
+        </footer>
       </div>
     </main>
-  )
+  );
 }

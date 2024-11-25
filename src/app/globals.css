@@ -1,27 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background: #fbf9ea;
+  --foreground: #10193a;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.container {
+  width: 90%;
+  max-width: 1446px; /* Fixed the typo */
+  margin: 0 auto;
+}
+
+@keyframes infinite-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes infinite-float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, 0); /* Optional floating effect */
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.rotate {
+  animation: infinite-rotation 60s linear infinite;
+}
+
+.float {
+  animation: infinite-float 3s ease-in-out infinite;
 }

@@ -48,7 +48,7 @@ const config = {
 export default function Home() {
   return (
     <main className="container">
-      <div className="fixed left-[50%] translate-x-[-50%] top-0 z-10 bg-foreground text-background rounded-b-[20px] py-3 hover:text-accent-beige transition-all">
+      <div className="ml-auto max-w-fit sticky top-0 z-[100] bg-foreground text-background rounded-b-[20px] py-3 hover:text-accent-beige transition-all">
         {config.headerLinks.map((link, index) => (
           <a
             key={index}
@@ -88,26 +88,76 @@ export default function Home() {
 
         {/* Additional Sections */}
         <div className="grid lg:grid-cols-2 gap-4">
-          <div className="py-16 min-h-[40vh] flex lg:px-6 flex-col gap-14 justify-center relative">
-            <div className="">
+          <div className="py-16 min-h-[40vh] flex lg:px-6 flex-col gap-10 justify-start relative">
+            <div>
               <h2 className="text-5xl font-semibold leading-tight">
-                Hi, Nice to meet you
+                Designing digital products with emphasis on visual design
               </h2>
-              <span className="text-2xl block mt-2">
-                I am Vishal aka the guy
+              <span className="text-2xl font-semibold block mt-2">
+                Working Experience
               </span>
-              <p className="text-lg text-justify max-w-[800px] mt-8">
-                The technical jargon and me convincing you can wait—let’s get
-                your project off the ground and into the world. Let’s keep it
-                simple:{" "}
-                <span className="underline">
-                  {" "}
-                  I build cool stuff that works
-                </span>
-                .
+            </div>
+
+            <div>
+              <h2 className="font-medium text-2xl">- Virtue Analytics</h2>
+              <p className="mt-2 text-lg">
+                <span className="font-medium">Role:</span> Full-Stack Developer
               </p>
+              <p className="text-sm italic text-gray-600">
+                May 2023 – Present | Lucknow, India
+              </p>
+              <ul className="[&>*]:mb-4 mt-4">
+                <li className="text-justify">
+                  Managed a HIPAA-compliant healthcare application for a US
+                  client, ensuring full compliance with data security and
+                  privacy regulations. Implemented encryption, access control,
+                  and best practices to safeguard sensitive patient data.
+                </li>
+                <li className="text-justify">
+                  Led front-end development for an EdTech application designed
+                  to help students select colleges based on interests, academic
+                  profiles, and budgets. Collaborated with a team to integrate
+                  predictive AI models, simplifying the college selection
+                  process.
+                </li>
+                <li>
+                  <span className="font-medium">Techs used:</span> Next.js,
+                  React Native, Firebase, Node.js, Vercel
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="font-medium text-2xl">- Ample Media Agency</h2>
+              <p className="mt-2 text-lg">
+                <span className="font-medium">Role:</span> Full Stack Web and
+                Mobile Developer
+              </p>
+              <p className="text-sm italic text-gray-600">
+                Jun 2020 – Apr 2023 | Remote, India
+              </p>
+              <ul className="[&>*]:mb-4 mt-4">
+                <li className="text-justify">
+                  Designed and deployed a full-stack portal for legal
+                  professionals, creating both web and mobile applications. This
+                  platform streamlined the case filing process and improved
+                  operational effectiveness by efficiently matching lawyers with
+                  cases.
+                </li>
+                <li className="text-justify">
+                  Guided a client through the entire design journey from concept
+                  to product launch, securing funding for their startup.
+                  Developed an e-commerce app with location-based functionality
+                  connecting wholesalers and retailers.
+                </li>
+                <li>
+                  <span className="font-medium">Techs used:</span> Next.js,
+                  Strapi, Express, Docker, PostgreSQL, MongoDB, Go, AWS
+                </li>
+              </ul>
             </div>
           </div>
+
           <div className=""></div>
 
           <div className="rounded-l-[50px] bg-accent-beige min-h-[80vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">

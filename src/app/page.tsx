@@ -48,7 +48,7 @@ const config = {
 export default function Home() {
   return (
     <main className="container">
-      <div className="ml-auto max-w-fit sticky top-0 z-[100] bg-foreground text-background rounded-b-[20px] py-3 hover:text-accent-beige transition-all">
+      <div className="ml-auto max-w-fit sticky top-[-2px] z-[100] bg-foreground text-background rounded-b-[20px] py-2 lg:py-3 hover:text-accent-beige transition-all">
         {config.headerLinks.map((link, index) => (
           <a
             key={index}
@@ -88,91 +88,101 @@ export default function Home() {
 
         {/* Additional Sections */}
         <div className="grid lg:grid-cols-2 gap-4">
-          <div className="py-16 min-h-[40vh] flex lg:px-6 flex-col gap-10 justify-start relative">
+          <div className="lg:col-span-2 pt-16 min-h-[40vh] flex lg:px-6 flex-col gap-10 justify-start relative">
             <div>
-              <h2 className="text-5xl font-semibold leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight">
                 Designing digital products with emphasis on visual design
               </h2>
-              <span className="text-2xl font-semibold block mt-2">
+              <span className="text-xl lg:text-3xl font-semibold block mt-4">
                 Working Experience
               </span>
             </div>
 
-            <div>
-              <h2 className="font-medium text-2xl">- Virtue Analytics</h2>
-              <p className="mt-2 text-lg">
-                <span className="font-medium">Role:</span> Full-Stack Developer
-              </p>
-              <p className="text-sm italic text-gray-600">
-                May 2023 – Present | Lucknow, India
-              </p>
-              <ul className="[&>*]:mb-4 mt-4">
-                <li className="text-justify">
-                  Managed a HIPAA-compliant healthcare application for a US
-                  client, ensuring full compliance with data security and
-                  privacy regulations. Implemented encryption, access control,
-                  and best practices to safeguard sensitive patient data.
-                </li>
-                <li className="text-justify">
-                  Led front-end development for an EdTech application designed
-                  to help students select colleges based on interests, academic
-                  profiles, and budgets. Collaborated with a team to integrate
-                  predictive AI models, simplifying the college selection
-                  process.
-                </li>
-                <li>
-                  <span className="font-medium">Techs used:</span> Next.js,
-                  React Native, Firebase, Node.js, Vercel
-                </li>
-              </ul>
-            </div>
+            <div className="[&>*]:mb-10">
+              <div className="flex flex-col lg:flex-row lg:gap-8 gap-2">
+                <div className="text-xs lg:text-sm text-gray-600">
+                  May 2023 – Present | Lucknow, India
+                </div>
+                <div className="lg:max-w-[40rem]">
+                  <h2 className="font-medium text-xl lg:text-2xl">
+                    / Virtue Analytics
+                  </h2>
+                  <p className="mt-2 lg:text-lg text-sm">
+                    <span className="font-medium">Role:</span> Full-Stack
+                    Developer
+                  </p>
 
-            <div>
-              <h2 className="font-medium text-2xl">- Ample Media Agency</h2>
-              <p className="mt-2 text-lg">
-                <span className="font-medium">Role:</span> Full Stack Web and
-                Mobile Developer
-              </p>
-              <p className="text-sm italic text-gray-600">
-                Jun 2020 – Apr 2023 | Remote, India
-              </p>
-              <ul className="[&>*]:mb-4 mt-4">
-                <li className="text-justify">
-                  Designed and deployed a full-stack portal for legal
-                  professionals, creating both web and mobile applications. This
-                  platform streamlined the case filing process and improved
-                  operational effectiveness by efficiently matching lawyers with
-                  cases.
-                </li>
-                <li className="text-justify">
-                  Guided a client through the entire design journey from concept
-                  to product launch, securing funding for their startup.
-                  Developed an e-commerce app with location-based functionality
-                  connecting wholesalers and retailers.
-                </li>
-                <li>
-                  <span className="font-medium">Techs used:</span> Next.js,
-                  Strapi, Express, Docker, PostgreSQL, MongoDB, Go, AWS
-                </li>
-              </ul>
+                  <ul className="[&>*]:mb-4 mt-4 list-disc text-sm lg:text-base pl-4">
+                    <li className="text-justify">
+                      Managed a HIPAA-compliant healthcare application for a US
+                      client, ensuring full compliance with data security and
+                      privacy regulations. Implemented encryption, access
+                      control, and best practices to safeguard sensitive patient
+                      data.
+                    </li>
+                    <li className="text-justify">
+                      Led front-end development for an EdTech application
+                      designed to help students select colleges based on
+                      interests, academic profiles, and budgets. Collaborated
+                      with a team to integrate predictive AI models, simplifying
+                      the college selection process.
+                    </li>
+                    <li className="list-none">
+                      <span className="font-medium">Techs used:</span> Next.js,
+                      React Native, Firebase, Node.js, Vercel
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-col lg:flex-row lg:gap-8 gap-2">
+                <div className="text-xs lg:text-sm text-gray-600">
+                  Jun 2020 – Apr 2023 | Remote, India
+                </div>
+                <div className="lg:max-w-[40rem]">
+                  <h2 className="font-medium text-xl lg:text-2xl">
+                    / Ample Media Agency
+                  </h2>
+                  <p className="mt-2 lg:text-lg text-sm">
+                    <span className="font-medium">Role:</span> Full Stack Web
+                    and Mobile Developer
+                  </p>
+                  <ul className="[&>*]:mb-4 mt-4 list-disc text-sm lg:text-base pl-4">
+                    <li className="text-justify">
+                      Designed and deployed a full-stack portal for legal
+                      professionals, creating both web and mobile applications.
+                      This platform streamlined the case filing process and
+                      improved operational effectiveness by efficiently matching
+                      lawyers with cases.
+                    </li>
+                    <li className="text-justify">
+                      Guided a client through the entire design journey from
+                      concept to product launch, securing funding for their
+                      startup. Developed an e-commerce app with location-based
+                      functionality connecting wholesalers and retailers.
+                    </li>
+                    <li className="list-none">
+                      <span className="font-medium">Techs used:</span> Next.js,
+                      Strapi, Express, Docker, PostgreSQL, MongoDB, Go, AWS
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className=""></div>
-
-          <div className="rounded-l-[50px] bg-accent-beige min-h-[80vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
-            <h2 className="feature-title max-w-[90%] text-4xl font-semibold leading-tight">
+          <div className="rounded-l-[50px] bg-accent-beige min-h-[50vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
+            <h2 className="feature-title max-w-[90%] text-3xl lg:text-4xl font-semibold leading-tight">
               {config.designSection.leftTitle}
             </h2>
-            <p className="text-lg text-justify">
+            <p className="lg:text-lg text-justify">
               {config.designSection.leftDescription}
             </p>
           </div>
-          <div className="rounded-r-[50px] bg-foreground text-background min-h-[80vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
-            <h2 className="feature-title max-w-[90%] ml-auto text-4xl leading-tight text-right">
+          <div className="rounded-r-[50px] bg-foreground text-background min-h-[50vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
+            <h2 className="feature-title max-w-[90%] ml-auto text-3xl lg:text-4xl font-semibold leading-tight text-right">
               {config.designSection.rightTitle}
             </h2>
-            <p className="text-lg text-justify">
+            <p className="lg:text-lg text-justify">
               {config.designSection.rightDescription}
             </p>
           </div>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
+import Menu from "@/components/Menu";
 
 export const metadata: Metadata = {
   title: "Vishal Shukla | Portfolio",
@@ -13,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <Menu />
+        {children}
+      </body>
     </html>
   );
 }

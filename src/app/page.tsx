@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 import { PiFlowerFill } from "react-icons/pi";
@@ -48,20 +49,6 @@ const config = {
 export default function Home() {
   return (
     <main className="container">
-      <div className="ml-auto max-w-fit sticky top-[-2px] z-[100] bg-foreground text-background rounded-b-[20px] py-2 lg:py-3 hover:text-accent-beige transition-all">
-        {config.headerLinks.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            target="_blank"
-            rel="noopener"
-            className="px-6 border-r-2 last:border-0 border-accent-beige cursor-pointer"
-          >
-            {link.text}
-          </a>
-        ))}
-      </div>
-
       <div className="hero-text w-full font-bold text-8xl flex flex-col  justify-center min-h-[70vh] lg:min-h-[40vh] lg:flex-row lg:items-center lg:text-[112px] lg:whitespace-nowrap mt-10">
         <span>Making</span>
         <span>Cool</span>

@@ -15,6 +15,7 @@ const config: Config = {
         "accent-yellow": "#ffdf2c",
         "accent-green": "#eeee38",
         "accent-beige": "#faebc4",
+        "accent-pastel-red": "#FF3D33",
       },
     },
   },

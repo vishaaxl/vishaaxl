@@ -20,6 +20,10 @@ body {
   margin: 0 auto;
 }
 
+pre {
+  border-radius: 5px;
+}
+
 @keyframes infinite-rotation {
   0% {
     transform: rotate(0deg);

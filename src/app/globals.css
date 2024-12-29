@@ -14,9 +14,23 @@ body {
   background: var(--background);
 }
 
+h1{
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
 .container {
   width: 95%;
   max-width: 1446px; /* Fixed the typo */
+  margin: 0 auto;
+}
+.container-blog {
+  width: 95%;
+  max-width: 767px; /* Fixed the typo */
   margin: 0 auto;
 }
 

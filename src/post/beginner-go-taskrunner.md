@@ -5,7 +5,7 @@ author: Vishal Shukla
 date: December 29, 2024
 ---
 
-# What we are going to build
+## What we are going to build
 We'll be making a tool like `make` which we can use run tasks using a simple yaml file like this.
 
 ```yaml

@@ -14,17 +14,12 @@ body {
   background: var(--background);
 }
 
-.container-blog h1{
+.container-blog h2{
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.container-blog h2{
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
 
 pre[class*="language-"]{
   margin-bottom: 2rem !important;

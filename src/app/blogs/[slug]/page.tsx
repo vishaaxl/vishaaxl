@@ -7,6 +7,7 @@ import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-go.min.js";
 import "prismjs/components/prism-yaml.min.js";
 import "prismjs/components/prism-bash.min.js";
+import "prismjs/components/prism-python.min.js";
 
 interface PageProps {
   params: {

@@ -7,9 +7,10 @@ const headerLinks = [
   { text: "Resume", href: "https://flowcv.com/resume/g86v5tef43" },
   { text: "Email", href: "mailto:vishaaxl@gmail.com" },
 ];
+
 export default function Menu({}: MenuProps) {
   return (
-    <div className="bg-white md:bg-transparent">
+    <div className="">
       <div className="container">
         <ul className="py-4 md:py-4 font-medium flex md:gap-8 gap-4 capitalize text-base md:text-lg justify-end">
           <li>

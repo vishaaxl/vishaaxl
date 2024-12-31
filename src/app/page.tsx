@@ -1,55 +1,11 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-
 import { PiFlowerFill } from "react-icons/pi";
-
-const config = {
-  headerLinks: [
-    { text: "Github", href: "https://github.com/vishaaxl" },
-    { text: "Resume", href: "https://flowcv.com/resume/g86v5tef43" },
-    { text: "Email", href: "mailto:vishaaxl@gmail.com" },
-  ],
-  heroText: "MakingCoolSh#t",
-  featureSection: {
-    title: "Here to make you look\ngood and win business.",
-    description:
-      "Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed.",
-    ctaText: "Get in Touch",
-    ctaLink: "mailto:vishaaxl@gmail.com",
-  },
-  experience: [
-    {
-      company: "Virtue Analytics",
-      date: "May 2023 - present",
-      description:
-        "Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed. Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed.",
-    },
-    {
-      company: "Ample Media Agency",
-      date: "January 2020 - February 2023",
-      description:
-        "Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed. Websites that convert and apps that feel effortless. Clean, clear, and thoughtfully designed.",
-    },
-  ],
-  finalSection: {
-    title: "Wanna Connect ?",
-    ctaText: "Drop an email",
-    ctaLink: "mailto:vishaaxl@gmail.com",
-  },
-  designSection: {
-    leftTitle: "From design to development\n to deployment.",
-    leftDescription:
-      "Every project kicks off with an idea and wraps up with something awesome. I'll make sure everything runs smoothly, from the first brainstorm to the final launch.",
-    rightTitle: "Can't think of another\n catchy line.",
-    rightDescription:
-      "The technical jargon and me convincing you can wait—let’s get your project off the ground and into the world. Let’s keep it simple: I build cool stuff that works.",
-  },
-};
 
 export default function Home() {
   return (
     <main className="container">
-      <div className="hero-text w-full font-bold text-8xl flex flex-col  justify-center min-h-[70vh] lg:min-h-[40vh] lg:flex-row lg:items-center lg:text-[112px] lg:whitespace-nowrap mt-10">
+      <div className="hero-text w-full font-bold text-8xl flex flex-col justify-center min-h-[70vh] lg:min-h-[40vh] lg:flex-row lg:items-center lg:text-[112px] lg:whitespace-nowrap mt-10">
         <span>Making</span>
         <span>Cool</span>
         <span>Sh#t</span>
@@ -59,131 +15,83 @@ export default function Home() {
       <div className="grid gap-4">
         <div className="rounded-[50px] p-8 lg:p-10 flex flex-col justify-start lg:justify-center gap-5 overflow-hidden w-full bg-accent-beige min-h-[100vh] lg:min-h-[50vh] relative">
           <h2 className="feature-title text-5xl lg:text-6xl font-semibold leading-tight">
-            {config.featureSection.title}
+            Here to make you look
+            <br />
+            good and win business.
           </h2>
           <p className="feature-description text-right lg:text-left text-2xl max-w-[600px]">
-            {config.featureSection.description}
+            Websites that convert and apps that feel effortless. Clean, clear,
+            and thoughtfully designed.
           </p>
           <a
-            href={config.featureSection.ctaLink}
+            href="mailto:vishaaxl@gmail.com"
             className="cta-button max-w-fit mt-4 font-medium py-4 px-8 rounded-full bg-foreground text-background flex items-center gap-4"
           >
-            {config.featureSection.ctaText} <FaArrowRight className="float" />
+            Get in Touch <FaArrowRight className="float" />
           </a>
           <PiFlowerFill className="flower-icon text-accent-red absolute bottom-[-145px] right-[-100px] text-[500px] rotate" />
         </div>
 
-        {/* Additional Sections */}
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div className="lg:col-span-2 pt-16 min-h-[40vh] flex lg:px-6 flex-col gap-10 justify-start relative">
+        <div className="px-8 py-20">
+          <span className="font-medium">What I do</span>
+          <h2 className="feature-title text-6xl font-semibold leading-tight">
+            Whatever It Takes
+          </h2>
+          <div className="grid lg:grid-cols-3 gap-8 pt-20">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight">
-                Designing digital products with emphasis on visual design
-              </h2>
-              <span className="text-xl lg:text-3xl font-semibold block mt-4">
-                Working Experience
+              <span className="font-semibold block mb-4 text-slate-700 text-sm">
+                .01
               </span>
+              <h4 className="font-semibold text-2xl pb-4">Design</h4>
+              <p className="leading-[1.8] text-slate-700">
+                I create intuitive and visually stunning designs that leave a
+                lasting impression. From user interface layouts to branding,
+                every detail is crafted to connect.
+              </p>
             </div>
-
-            <div className="[&>*]:mb-10">
-              <div className="flex flex-col lg:flex-row lg:gap-8 gap-2">
-                <div className="text-xs lg:text-sm text-gray-600">
-                  May 2023 – Present | Lucknow, India
-                </div>
-                <div className="lg:max-w-[40rem]">
-                  <h2 className="font-medium text-xl lg:text-2xl">
-                    / Virtue Analytics
-                  </h2>
-                  <p className="mt-2 lg:text-lg text-sm">
-                    <span className="font-medium">Role:</span> Full-Stack
-                    Developer
-                  </p>
-
-                  <ul className="[&>*]:mb-4 mt-4 list-disc text-sm lg:text-base pl-4">
-                    <li className="text-justify">
-                      Managed a HIPAA-compliant healthcare application for a US
-                      client, ensuring full compliance with data security and
-                      privacy regulations. Implemented encryption, access
-                      control, and best practices to safeguard sensitive patient
-                      data.
-                    </li>
-                    <li className="text-justify">
-                      Led front-end development for an EdTech application
-                      designed to help students select colleges based on
-                      interests, academic profiles, and budgets. Collaborated
-                      with a team to integrate predictive AI models, simplifying
-                      the college selection process.
-                    </li>
-                    <li className="list-none">
-                      <span className="font-medium">Techs used:</span> Next.js,
-                      React Native, Firebase, Node.js, Vercel
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row lg:gap-8 gap-2">
-                <div className="text-xs lg:text-sm text-gray-600">
-                  Jun 2020 – Apr 2023 | Remote, India
-                </div>
-                <div className="lg:max-w-[40rem]">
-                  <h2 className="font-medium text-xl lg:text-2xl">
-                    / Ample Media Agency
-                  </h2>
-                  <p className="mt-2 lg:text-lg text-sm">
-                    <span className="font-medium">Role:</span> Full Stack Web
-                    and Mobile Developer
-                  </p>
-                  <ul className="[&>*]:mb-4 mt-4 list-disc text-sm lg:text-base pl-4">
-                    <li className="text-justify">
-                      Designed and deployed a full-stack portal for legal
-                      professionals, creating both web and mobile applications.
-                      This platform streamlined the case filing process and
-                      improved operational effectiveness by efficiently matching
-                      lawyers with cases.
-                    </li>
-                    <li className="text-justify">
-                      Guided a client through the entire design journey from
-                      concept to product launch, securing funding for their
-                      startup. Developed an e-commerce app with location-based
-                      functionality connecting wholesalers and retailers.
-                    </li>
-                    <li className="list-none">
-                      <span className="font-medium">Techs used:</span> Next.js,
-                      Strapi, Express, Docker, PostgreSQL, MongoDB, Go, AWS
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div>
+              <span className="font-semibold block mb-4 text-slate-700 text-sm">
+                .02
+              </span>
+              <h4 className="font-semibold text-2xl pb-4">Development</h4>
+              <p className="leading-[1.8] text-slate-700">
+                With expertise in modern technologies, I develop clean,
+                efficient, and scalable applications. Whether it’s a web
+                platform, a mobile app, or a complex system.
+              </p>
             </div>
-          </div>
-
-          <div className="rounded-l-[50px] bg-accent-beige min-h-[50vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
-            <h2 className="feature-title max-w-[90%] text-3xl lg:text-4xl font-semibold leading-tight">
-              {config.designSection.leftTitle}
-            </h2>
-            <p className="lg:text-lg text-justify">
-              {config.designSection.leftDescription}
-            </p>
-          </div>
-          <div className="rounded-r-[50px] bg-foreground text-background min-h-[50vh] lg:min-h-[50vh] flex px-14 flex-col gap-14 justify-center">
-            <h2 className="feature-title max-w-[90%] ml-auto text-3xl lg:text-4xl font-semibold leading-tight text-right">
-              {config.designSection.rightTitle}
-            </h2>
-            <p className="lg:text-lg text-justify">
-              {config.designSection.rightDescription}
-            </p>
+            <div>
+              <span className="font-semibold block mb-4 text-slate-700 text-sm">
+                .03
+              </span>
+              <h4 className="font-semibold text-2xl pb-4">Deployment</h4>
+              <p className="leading-[1.8] text-slate-700">
+                I handle end-to-end deployment processes, ensuring your product
+                is live and accessible to the world. With a focus on
+                scalability, performance, and uptime.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="py-10 flex px-6 flex-col gap-2 justify-center pb-24">
+        <div className="px-8 py-20">
+          <div className="text-center">
+            <span className="font-medium">Projects</span>
+            <h2 className="feature-title text-6xl font-semibold leading-tight">
+              Some of my works
+            </h2>
+          </div>
+        </div>
+
+        <div className="py-10 flex px-8 flex-col gap-2 justify-center pb-24">
           <h2 className="feature-title text-6xl font-semibold leading-tight">
-            {config.finalSection.title}
+            Wanna Connect ?
           </h2>
           <a
-            href={config.finalSection.ctaLink}
+            href="mailto:vishaaxl@gmail.com"
             className="cta-button max-w-fit mt-4 font-medium py-4 px-8 rounded-full bg-foreground text-background flex items-center gap-4"
           >
-            {config.finalSection.ctaText} <FaArrowRight className="float" />
+            Drop an email <FaArrowRight className="float" />
           </a>
         </div>
 

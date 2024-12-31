@@ -34,7 +34,7 @@ export default function Home() {
 
         <div className="px-8 py-20">
           <span className="font-medium">What I do</span>
-          <h2 className="feature-title text-6xl font-semibold leading-tight">
+          <h2 className="feature-title md:text-6xl text-5xl font-semibold leading-tight">
             Whatever It Takes
           </h2>
           <div className="grid lg:grid-cols-3 gap-8 pt-20">
@@ -77,7 +77,7 @@ export default function Home() {
         <div className="px-8 py-20">
           <div className="text-center">
             <span className="font-medium">Projects</span>
-            <h2 className="feature-title text-6xl font-semibold leading-tight">
+            <h2 className="feature-title md:text-6xl text-5xl font-semibold leading-tight">
               Some of my works
             </h2>
           </div>

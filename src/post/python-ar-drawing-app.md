@@ -1,5 +1,5 @@
 ---
-title: Beginner Python Project - Build an Augmented Reality Drawing App 
+title: "Beginner Python Project: Build an Augmented Reality Drawing App" 
 subtitle: Create a Gesture-Controlled Drawing Experience with Webcam and Hand Tracking Using OpenCV and Mediapipe
 author: Vishal Shukla
 date: December 31, 2024

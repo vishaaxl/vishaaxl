@@ -1,5 +1,5 @@
 ---
-title: Beginner Go Project - Create a Task Runner in Go
+title: "Beginner Go Project: Create a Task Runner in Go"
 subtitle: Learn How to Automate Your Development Workflow Using Go, YAML, and Task Automation Concepts
 author: Vishal Shukla
 date: December 29, 2024

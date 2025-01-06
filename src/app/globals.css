@@ -40,19 +40,25 @@ p code {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
 }
+ul code {
+  background-color: #dfdfdf;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
 
 li {
   padding-bottom: 1rem;
 }
-string .container {
+
+.container {
   width: 95%;
-  max-width: 1446px; /* Fixed the typo */
+  max-width: 1446px;
   margin: 0 auto;
 }
 
 .container-blog {
   width: 95%;
-  max-width: 767px; /* Fixed the typo */
+  max-width: 767px;
   margin: 0 auto;
 }
 

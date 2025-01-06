@@ -5,12 +5,11 @@ author: Vishal Shukla
 date: January 5, 2025
 ---
 
-
 ### Getting Started
 
 Begin by creating a new folder for your project and initialize a Go module with the following command:
 
-`go mod init github.com/vishaaxl/cheershare` 
+`go mod init github.com/vishaaxl/cheershare`
 
 ### Set up the Project Structure
 
@@ -35,20 +34,17 @@ my-otp-auth-server/
 
 Next, set up your `docker-compose.yml` file. This configuration will define the services—PostgreSQL and Redis—that you'll be working with throughout this tutorial.
 
-
 ### **Setting Up Services with Docker Compose**
 
 We will start by configuring the services required for our project. For the backend, we need the following:
 
--   **Redis**: We'll use the `redis:6` image. This service will configure a password for secure access, expose port `6379`, and enforce password authentication using the `--requirepass` flag to secure Redis access.
+- **Redis**: We'll use the `redis:6` image. This service will configure a password for secure access, expose port `6379`, and enforce password authentication using the `--requirepass` flag to secure Redis access.
 
--   **PostgreSQL**: We'll use the `postgres:13` image. The service will define a default user, password, and database, expose port `5432` for communication, and persist data with a named volume (`postgres_data`) to ensure durability.
-    
-    
+- **PostgreSQL**: We'll use the `postgres:13` image. The service will define a default user, password, and database, expose port `5432` for communication, and persist data with a named volume (`postgres_data`) to ensure durability.
 
 **Optional:**
 
--   **Main Backend Service**: You can define the main backend service here as well, which will interact with both PostgreSQL and Redis.
+- **Main Backend Service**: You can define the main backend service here as well, which will interact with both PostgreSQL and Redis.
 
 ```docker
 // docker-compose.yml
@@ -79,14 +75,13 @@ volumes:
 
 ```
 
-
 ### Main Backend Service
 
 For routing and handling HTTP requests, we’ll use the `github.com/julienschmidt/httprouter` package. To install the dependency, run the following command:
 
 ```sh
 go get github.com/julienschmidt/httprouter
-``` 
+```
 
 Next, create a file at `cmd/api/main.go` and paste the following code. An explanation for each line is provided in the comments:
 
@@ -174,19 +169,16 @@ func main() {
 Right now, you can test your setup by starting out server using `go run ./cmd/api` and sending a request to `http://localhost:4000`, which will return a welcome message. Next, we’ll define three additional routes to implement our core functionality:
 
 1.  **`/send-otp`**: This route will handle sending OTPs to users. It will generate a unique OTP, store it in Redis, and deliver it to the user.
-    
 2.  **`/verify-otp`**: This route will verify the OTP provided by the user. It will check against the value stored in Redis to confirm the user's identity.
-    
 3.  **`/login`**: This route will handle user login functionality once the OTP is verified and user is successfully created.
 
-But before we continue, we need a way to store user information like phone number and their one-time password for which we need to connect to the services we defined earlier in the  `docker-compose.yml` file.
-
+But before we continue, we need a way to store user information like phone number and their one-time password for which we need to connect to the services we defined earlier in the `docker-compose.yml` file.
 
 ### **Defining Helper Functions**
 
 Before implementing the routes, let’s define two essential helper functions. These functions will handle connections to the Redis and PostgreSQL servers, ensuring that our backend can interact with these services.
 
-Modify the 'config' struct to store information about the services.  These functions are pretty self-explanatory. 
+Modify the 'config' struct to store information about the services. These functions are pretty self-explanatory.
 
 ```go
 //main.go
@@ -242,9 +234,14 @@ func connectRedis(cfg redisConfig) (*redis.Client, error) {
 }
 ```
 
-
-
 You can use these functions to establish a connection to the PostgreSQL database and Redis server after starting the services with the `docker-compose up -d` command.
+
+But first lets install the required dependencies.
+
+```sh
+go get github.com/lib/pq
+go get github.com/go-redis/redis/v8
+```
 
 In the next part, we'll start working on those routes we talked about earlier. This is what your `main.go` file should look like now.
 
@@ -439,4 +436,3 @@ func connectRedis(cfg redisConfig) (*redis.Client, error) {
 }
 
 ```
-

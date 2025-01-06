@@ -1,14 +1,9 @@
 import { notFound } from "next/navigation";
 import MarkdownIt from "markdown-it";
-import MarkdownItPrism from "markdown-it-prism";
-import { getPostBySlug } from "@/utils/posts";
+import hljs from "highlight.js";
+import "highlight.js/styles/github-dark.css";
 
-import "prismjs/themes/prism-tomorrow.css";
-import "prismjs/components/prism-go.min.js";
-import "prismjs/components/prism-yaml.min.js";
-import "prismjs/components/prism-bash.min.js";
-import "prismjs/components/prism-python.min.js";
-import "prismjs/components/prism-docker.min.js";
+import { getPostBySlug } from "@/utils/posts";
 
 interface PageProps {
   params: {
@@ -25,7 +20,20 @@ export default async function Blog({ params }: PageProps) {
     notFound();
   }
 
-  const md = new MarkdownIt().use(MarkdownItPrism);
+  const md: MarkdownIt = new MarkdownIt({
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return `<pre class="hljs"><code>${
+            hljs.highlight(str, { language: lang }).value
+          }</code></pre>`;
+        } catch (__) {
+          console.error("Highlighting failed:", __);
+        }
+      }
+      return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`;
+    },
+  });
 
   const contentHtml = md.render(post.content);
 

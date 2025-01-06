@@ -14,25 +14,37 @@ body {
   background: var(--background);
 }
 
-.container-blog h2{
+.container-blog h2 {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.container-blog h3{
+.container-blog h3 {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-
-pre[class*="language-"]{
-  margin-bottom: 2rem !important;
+pre.hljs {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 2rem;
 }
 
+p code {
+  background-color: #dfdfdf;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
 
-.container {
+li {
+  padding-bottom: 1rem;
+}
+string .container {
   width: 95%;
   max-width: 1446px; /* Fixed the typo */
   margin: 0 auto;
@@ -44,8 +56,8 @@ pre[class*="language-"]{
   margin: 0 auto;
 }
 
-.container-blog p{
- margin-bottom:1rem
+.container-blog p {
+  margin-bottom: 1rem;
 }
 
 pre {

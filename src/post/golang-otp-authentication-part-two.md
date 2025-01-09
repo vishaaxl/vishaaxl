@@ -1,7 +1,9 @@
+---
 title: "Build an OTP-Based Authentication Server with Go: Part 2"
 subtitle: Learn to create a secure OTP authentication system with Go, including OTP generation, validation, and security best practices.
 author: Vishal Shukla
 date: January 6, 2025
+---
 
 In this part, we will focus on the application's core functionality, such as sending and verifying OTPs. If you haven't already, I recommend reading [Part 1](https://dev.to/vishaaxl/build-an-otp-based-authentication-server-with-go-part-1-760) before continuing.
 

@@ -213,7 +213,6 @@ The `Env` class is crucial because it acts as the backbone of the interpreter, m
     (square 4)  ; Result: 16
   ```
 
-````
 
 - **Scoped Resolution**
     Lisp supports nested scopes. For example, variables defined within a function should not overwrite global variables. The `Env` class supports this by linking to an outer environment, allowing scoped variable resolution.

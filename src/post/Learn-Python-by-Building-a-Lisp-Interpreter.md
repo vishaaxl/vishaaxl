@@ -196,7 +196,7 @@ The `Env` class is crucial because it acts as the backbone of the interpreter, m
 - **Variable Binding**  
   In Lisp, variables can be defined and used later in expressions. The `Env` class serves as a dictionary that stores variable names as keys and their corresponding values as entries.
 
-      Example:
+  Example:
 
       ```
       (define x 10)
@@ -207,6 +207,7 @@ The `Env` class is crucial because it acts as the backbone of the interpreter, m
 
 - **Function Storage**  
    Lisp allows defining custom functions. These functions are stored in the environment and can be called later. The `Env` class keeps track of these functions and their corresponding implementations.
+
   Example:
   ```
     (define square (lambda (x) (* x x)))

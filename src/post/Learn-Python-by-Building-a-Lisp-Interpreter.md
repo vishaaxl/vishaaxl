@@ -203,7 +203,7 @@ The `Env` class is crucial because it acts as the backbone of the interpreter, m
       (+ x 5)  ; Result: 15
       ```
 
-      The `define` operation associates `x` with `10`. When `x` is referenced later, the `Env` class retrieves its value.
+  The `define` operation associates `x` with `10`. When `x` is referenced later, the `Env` class retrieves its value.
 
 - **Function Storage**  
    Lisp allows defining custom functions. These functions are stored in the environment and can be called later. The `Env` class keeps track of these functions and their corresponding implementations.

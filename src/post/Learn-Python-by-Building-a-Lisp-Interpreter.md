@@ -198,10 +198,10 @@ The `Env` class is crucial because it acts as the backbone of the interpreter, m
 
   Example:
 
-      ```
+     ```
       (define x 10)
       (+ x 5)  ; Result: 15
-      ```
+     ```
 
   The `define` operation associates `x` with `10`. When `x` is referenced later, the `Env` class retrieves its value.
 

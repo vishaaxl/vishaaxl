@@ -35,23 +35,6 @@ redis-clone/
 └── README.md                  
 
 ```
-### Explanation of the Folder Structure:
-
-1. **`store/`**:
-    
-    - This directory contains the core logic for the cache and persistence mechanisms.
-        
-    - **`cache.go`**: Implements the LRU (Least Recently Used) cache where key-value pairs are stored and evicted when the cache exceeds the maximum size.
-        
-    - **`persistence.go`**: Handles the persistence logic for the cache, storing commands (such as `SET`) in a file (AOF file). This allows for data recovery after a restart.
-        
-2. **`cache.aof`**:
-    
-    - This file stores the commands in an append-only format. Whenever a `SET` operation is performed, the command is appended to this file. This helps ensure that data is not lost during server restarts.
-        
-3. **`main.go`**:
-    
-    - This is the entry point of the application. It contains the logic to start the server, set up the cache, and handle incoming connections from clients. It binds to a specific port and listens for commands like `SET` and `GET`.
 
 
 ## **Implementation**

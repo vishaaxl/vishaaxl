@@ -4,7 +4,7 @@ interface MenuProps {}
 
 const headerLinks = [
   { text: "Github", href: "https://github.com/vishaaxl" },
-  { text: "Resume", href: "https://flowcv.com/resume/g86v5tef43" },
+  // { text: "Resume", href: "https://flowcv.com/resume/g86v5tef43" },
   { text: "Email", href: "mailto:vishaaxl@gmail.com" },
 ];
 
